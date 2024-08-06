@@ -7,13 +7,13 @@
     <Generation Name="SIMULATION" State="STALE" Timestamp="1719879669"/>
     <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1719879697"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth/top_level.v" Type="Verilog">
+      <File Name="synth\top_level.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
-      <File Name="sim/top_level.v" Type="Verilog">
+      <File Name="sim\top_level.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

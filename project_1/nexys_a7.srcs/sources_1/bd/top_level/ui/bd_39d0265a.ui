@@ -5,37 +5,45 @@
    "DisplayTieOff":"1",
    "ExpandedHierarchyInLayout":"",
    "No Loops_ExpandedHierarchyInLayout":"",
-   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port UART -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD -left
-preplace port port-id_CLK100MHZ -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
-preplace port port-id_CPU_RESETN -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
-preplace inst source_50mhz -pg 1 -lvl 1 -x 190 -y 320 -swap {0 1 2 4 3} -defaultsOSRD -pinDir CLK100MHZ left -pinY CLK100MHZ 0L -pinDir clk_50mhz right -pinY clk_50mhz 0R -pinDir CPU_RESETN left -pinY CPU_RESETN 20L -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 40R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 20R
-preplace inst axi_uart_bridge -pg 1 -lvl 2 -x 480 -y 220 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 22 21} -defaultsOSRD -pinDir M_AXI right -pinY M_AXI 0R -pinDir UART left -pinY UART 10L -pinDir aresetn left -pinY aresetn 50L -pinDir aclk left -pinY aclk 30L
-preplace inst system_interconnect -pg 1 -lvl 3 -x 740 -y 160 -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 60L -pinDir M00_AXI right -pinY M00_AXI 0R -pinDir M01_AXI right -pinY M01_AXI 100R -pinDir aclk left -pinY aclk 80L -pinDir aresetn left -pinY aresetn 100L
-preplace inst system_ila_0 -pg 1 -lvl 6 -x 1670 -y 60 -swap {5 1 2 3 4 0 6 7 8 9 10 11} -defaultsOSRD -pinDir SLOT_0_AXIS left -pinY SLOT_0_AXIS 20L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 0L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L
-preplace inst frame_generator -pg 1 -lvl 4 -x 1050 -y 160 -defaultsOSRD -pinDir AXIS_FD right -pinY AXIS_FD 0R -pinDir AXIS_MD right -pinY AXIS_MD 20R -pinDir S_AXI left -pinY S_AXI 0L -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 40L -pinBusDir FRAME_SIZE right -pinBusY FRAME_SIZE 40R
-preplace inst datapath -pg 1 -lvl 5 -x 1370 -y 160 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 18 19 17} -defaultsOSRD -pinDir AXIS_FD left -pinY AXIS_FD 0L -pinDir AXIS_MD left -pinY AXIS_MD 20L -pinDir AXIS_OUT0 right -pinY AXIS_OUT0 0R -pinDir AXIS_OUT1 right -pinY AXIS_OUT1 20R -pinDir DP_CONFIG left -pinY DP_CONFIG 100L -pinDir clk left -pinY clk 140L -pinDir resetn left -pinY resetn 160L -pinBusDir FRAME_SIZE left -pinBusY FRAME_SIZE 120L
-preplace inst data_consumer -pg 1 -lvl 6 -x 1670 -y 220 -swap {4 1 2 3 0 5 6 7 8 9} -defaultsOSRD -pinDir AXIS_RX0 left -pinY AXIS_RX0 20L -pinDir AXIS_RX1 left -pinY AXIS_RX1 0L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 150L
-preplace netloc CLK100MHZ_1 1 0 1 NJ 320
-preplace netloc CPU_RESETN_1 1 0 1 NJ 340
-preplace netloc frame_generator_FRAME_SIZE 1 4 1 1220 200n
-preplace netloc source_100mhz_interconnect_aresetn 1 1 2 NJ 360 600
-preplace netloc source_100mhz_peripheral_aresetn 1 1 5 380 340 NJ 340 900 320 1220 370 N
-preplace netloc system_clock_clk_100mhz 1 1 5 360 320 580 320 880 280 1200 100 1520
-preplace netloc DP_CONFIG_1 1 3 2 N 260 NJ
-preplace netloc datapath_AXIS_OUT0 1 5 1 1540 60n
-preplace netloc datapath_AXIS_OUT1 1 5 1 1560 80n
-preplace netloc frame_generator_AXIS_FD 1 4 1 N 160
-preplace netloc frame_generator_AXIS_MD 1 4 1 N 180
-preplace netloc hier_0_M_AXI 1 2 1 N 220
-preplace netloc hier_0_UART 1 0 2 NJ 230 NJ
-preplace netloc system_interconnect_M00_AXI 1 3 1 N 160
-levelinfo -pg 1 0 190 480 740 1050 1370 1670 1770
-pagesize -pg 1 -db -bbox -sgen -150 0 1770 420
+preplace port UART -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD -left
+preplace port port-id_CLK100MHZ -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port port-id_CPU_RESETN -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD
+preplace inst source_50mhz -pg 1 -lvl 1 -x 170 -y 390 -swap {0 1 2 4 3} -defaultsOSRD -pinDir CLK100MHZ left -pinY CLK100MHZ 0L -pinDir clk_50mhz right -pinY clk_50mhz 0R -pinDir CPU_RESETN left -pinY CPU_RESETN 30L -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 40R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 20R
+preplace inst axi_uart_bridge -pg 1 -lvl 2 -x 440 -y 290 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 22 21} -defaultsOSRD -pinDir M_AXI right -pinY M_AXI 0R -pinDir UART left -pinY UART 10L -pinDir aresetn left -pinY aresetn 50L -pinDir aclk left -pinY aclk 30L
+preplace inst system_interconnect -pg 1 -lvl 3 -x 690 -y 290 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 40 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 20 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 0L -pinDir M00_AXI right -pinY M00_AXI 20R -pinDir M01_AXI right -pinY M01_AXI 0R -pinDir aclk left -pinY aclk 20L -pinDir aresetn left -pinY aresetn 40L
+preplace inst system_ila_0 -pg 1 -lvl 7 -x 1930 -y 440 -swap {0 1 2 3 4 5 6 7 8 9 11 10} -defaultsOSRD -pinDir SLOT_0_AXIS left -pinY SLOT_0_AXIS 0L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 20L -pinDir clk left -pinY clk 60L -pinDir resetn left -pinY resetn 40L
+preplace inst frame_generator -pg 1 -lvl 4 -x 980 -y 190 -defaultsOSRD -pinDir AXIS_FD right -pinY AXIS_FD 0R -pinDir AXIS_MD right -pinY AXIS_MD 200R -pinDir S_AXI left -pinY S_AXI 120L -pinDir clk left -pinY clk 200L -pinDir resetn left -pinY resetn 220L -pinBusDir FRAME_SIZE right -pinBusY FRAME_SIZE 220R
+preplace inst data_consumer -pg 1 -lvl 7 -x 1930 -y 600 -defaultsOSRD -pinDir AXIS_RX0 left -pinY AXIS_RX0 0L -pinDir AXIS_RX1 left -pinY AXIS_RX1 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 90L
+preplace inst data_switch_0 -pg 1 -lvl 5 -x 1310 -y 190 -swap {0 1 2 3 4 5 6 7 8 9 10 11 14 15 13 12} -defaultsOSRD -pinDir axis_in left -pinY axis_in 0L -pinDir axis_out1 right -pinY axis_out1 60R -pinDir axis_out2 right -pinY axis_out2 80R -pinDir clk left -pinY clk 60L -pinDir resetn left -pinY resetn 80L -pinBusDir PACKET_SIZE left -pinBusY PACKET_SIZE 40L -pinBusDir PP_GROUP left -pinBusY PP_GROUP 20L
+preplace inst metadata_splitter_0 -pg 1 -lvl 5 -x 1310 -y 390 -defaultsOSRD -pinDir axis_in left -pinY axis_in 0L -pinDir axis_out1 right -pinY axis_out1 0R -pinDir axis_out2 right -pinY axis_out2 170R -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 40L
+preplace inst config_parameters -pg 1 -lvl 4 -x 980 -y 60 -swap {1 0 2} -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R -pinBusDir dout1 right -pinBusY dout1 0R -pinBusDir dout2 right -pinBusY dout2 40R
+preplace inst path_1 -pg 1 -lvl 6 -x 1650 -y 560 -swap {0 1 2 3 4 5 6 7 8 9 12 13 10 11} -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 0L -pinDir axis_out right -pinY axis_out 0R -pinDir resetn left -pinY resetn 60L -pinDir clk left -pinY clk 80L -pinBusDir FRAME_SIZE left -pinBusY FRAME_SIZE 20L -pinBusDir PACKET_SIZE left -pinBusY PACKET_SIZE 40L
+preplace inst path_0 -pg 1 -lvl 6 -x 1650 -y 250 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 16 15 14} -defaultsOSRD -pinDir axis_out right -pinY axis_out 190R -pinDir axis_in left -pinY axis_in 0L -pinDir S_AXIS left -pinY S_AXIS 140L -pinDir s_axis_aclk left -pinY s_axis_aclk 200L -pinDir s_axis_aresetn left -pinY s_axis_aresetn 180L -pinBusDir FRAME_SIZE left -pinBusY FRAME_SIZE 160L
+preplace netloc CLK100MHZ_1 1 0 1 NJ 390
+preplace netloc CPU_RESETN_1 1 0 1 NJ 420
+preplace netloc source_100mhz_interconnect_aresetn 1 1 2 NJ 430 560
+preplace netloc source_100mhz_peripheral_aresetn 1 1 6 340 410 NJ 410 820 490 1160 620 1480 690 NJ
+preplace netloc system_clock_clk_100mhz 1 1 6 320 390 540 390 840 470 1140 640 1500 500 1780
+preplace netloc frame_size_dout 1 4 2 N 60 1520
+preplace netloc pp_group_dout 1 4 1 1160 80n
+preplace netloc packet_size_dout 1 4 2 1120 330 1460
+preplace netloc datapath_AXIS_OUT0 1 6 1 1820 460n
+preplace netloc datapath_AXIS_OUT1 1 6 1 1800 440n
+preplace netloc hier_0_M_AXI 1 2 1 N 290
+preplace netloc hier_0_UART 1 0 2 NJ 300 NJ
+preplace netloc system_interconnect_M00_AXI 1 3 1 N 310
+preplace netloc frame_generator_AXIS_FD 1 4 1 N 190
+preplace netloc frame_generator_AXIS_MD 1 4 1 N 390
+preplace netloc metadata_splitter_0_axis_out1 1 5 1 N 390
+preplace netloc metadata_splitter_0_axis_out2 1 5 1 N 560
+preplace netloc data_switch_0_axis_out1 1 5 1 N 250
+levelinfo -pg 1 0 170 440 690 980 1310 1650 1930 2030
+pagesize -pg 1 -db -bbox -sgen -130 0 2030 740
 ",
-   "No Loops_ScaleFactor":"0.794456",
-   "No Loops_TopLeft":"-141,-222",
+   "No Loops_ScaleFactor":"0.849074",
+   "No Loops_TopLeft":"-130,-62",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port port-id_CLK100MHZ -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
